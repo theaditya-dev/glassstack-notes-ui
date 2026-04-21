@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note Card Stack</title>
+    <link rel="stylesheet" href="https://unpkg.com/remixicon/fonts/remixicon.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="form-container">
+        <form autocomplete="off" class="form-box">
+
+            <h2>New Call</h2>
+
+            <label>Image URL</label>
+            <input name="img" required type="text" placeholder="https://example.com/photo.jpg" />
+
+            <label>Full Name</label>
+            <input name="name" required type="text" placeholder="Enter full name" />
+
+            <label>Home Town</label>
+            <input name="town" required type="text" placeholder="Enter home town" />
+
+            <label>Purpose</label>
+            <input name="purpose" required type="text" placeholder="e.g., Quick appointment note" />
+
+            <label>Category</label>
+            <div class="category">
+
+                <label class="tag">
+                    <input required type="radio" name="category" value="emergency">
+                    <span>Emergency</span>
+                </label>
+
+                <label class="tag">
+                    <input type="radio" name="category" value="important">
+                    <span>Important</span>
+                </label>
+
+                <label class="tag">
+                    <input type="radio" name="category" value="urgent">
+                    <span>Urgent</span>
+                </label>
+
+                <label class="tag">
+                    <input type="radio" name="category" value="no-rush">
+                    <span>No Rush</span>
+                </label>
+
+            </div>
+
+            <button type="submit" class="create-btn">Create Note</button>
+            <button type="button" class="close-btn">Close</button>
+
+        </form>
+    </div>
+
+    <div class="note-container">
+        <div class="left-icons">
+            <button id="add-note"><i class="ri-add-line"></i></button>
+            <button id = "upbtn"><i class="ri-arrow-up-line"></i></button>
+            <button id = "downbtn"><i class="ri-arrow-down-line"></i></button>
+        </div>
+
+        <div class="stack">
+            <div class="card">
+                <img src="images/photo-1544005313-94ddf0286df2.jfif" />
+                <h3>Fatima Uma</h3>
+                <p>Home town <span>Singapore</span></p>
+                <p>Bookings <span>3 times</span></p>
+
+                <div class="actions">
+                    <button class="call">📞 Call</button>
+                    <button class="msg">Message</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-colors">
+            <span class="dot black"></span>
+            <span class="dot purple"></span>
+            <span class="dot orange"></span>
+            <span class="dot teal"></span>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
